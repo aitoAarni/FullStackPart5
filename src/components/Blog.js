@@ -9,17 +9,14 @@ const Blog = ({ blog, updatedLikes, removeBlog, user }) => {
         marginBottom: 5
     }
     return (
-        <div style={blogStyle}>
+        <div className='blog' style={blogStyle}>
             <div>
-                spederö
-            </div>
-            <div>
-                pä {blog.title} {blog.author}
+                {blog.title} {blog.author}
             </div>
             <Togglable buttonLabel='show'>
                 <div>
                     url: {blog.url}<br/>
-                    likes: {blog.likes} <button onClick={() => {updatedLikes(blog)}}>like</button><br/>
+                    likes: {blog.likes} <button className='like-button' onClick={() => {updatedLikes(blog)}}>like</button><br/>
                     {blog.user.name}<br/>
                     {blog.user.name === user.name ?
                         <button onClick={() => {removeBlog(blog)}}>remove</button>

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 const ErrorMessage = ({ message }) => {
     return (
         <>
-            <p>
+            <p className='error'>
                 {message}
             </p>
         </>
@@ -13,7 +13,7 @@ const ErrorMessage = ({ message }) => {
 const Notification = ({ message }) => {
     return (
         <>
-            <p>
+            <p className='notification'>
                 {message}
             </p>
         </>

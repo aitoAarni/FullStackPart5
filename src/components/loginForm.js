@@ -32,14 +32,14 @@ const LoginForm = ({
     return (
         <form onSubmit={loginHandler}>
             <div>
-                <p>Username</p>
-                <input type='text' value={username} name='Username' onChange={({ target }) => setUsername(target.value)} />
+                <p >Username</p>
+                <input id='username' type='text' value={username} name='Username' onChange={({ target }) => setUsername(target.value)} />
             </div>
             <div>
-                <p>password</p>
-                <input type='password' value={password} name='Password' onChange={({ target }) => setPassword(target.value)} />
+                <p>Password</p>
+                <input id='password' type='password' value={password} name='Password' onChange={({ target }) => setPassword(target.value)} />
             </div>
-            <button type="submit">login</button>
+            <button id='login-button' type="submit">login</button>
         </form>
     )}
 
